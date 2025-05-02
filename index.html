@@ -16,7 +16,27 @@
   <link href="./assets/favicon.ico" rel="icon">
 
   <title>Portafolio Nicolas</title>  
-
+  <style>
+    /* Estilo base (mobile first) */
+    .hero-full-container h1 {
+      font-size: 3rem;
+    }
+    
+    /* Pantallas medianas (768px-1200px) */
+    @media (min-width: 768px) and (max-width: 1200px) {
+      .hero-full-container h1 {
+        font-size: 4.5rem;
+      }
+    }
+    
+    /* Pantallas grandes (más de 1200px) */
+    @media (min-width: 1201px) {
+      .hero-full-container h1 {
+        font-size: 7rem; /* o el tamaño que prefieras para desktop */
+      }
+    }
+  </style>
+  
 <link href="./main.3f6952e4.css" rel="stylesheet"></head>
 
 <body class="minimal">
@@ -52,7 +72,7 @@
 <div class="hero-full-container background-image-container white-text-container" style="background-image: url('./assets/images/space2.png'); background-position: center center; background-size: cover; background-repeat: no-repeat;">
   <div class="container">
     <div class="row">
-      <div class="col-xs-14">
+      <div class="col-xs-12">
         <div class="hero-full-wrapper">
             <div class="text-content">              
               <h1>Bienvenido!,<br><br>
