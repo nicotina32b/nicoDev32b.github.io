@@ -1,6 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<style>
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+  }
+
+  .card-container p {
+    text-align: left;
+    width: 100%;
+    /* asegura que ocupe todo el ancho disponible dentro del container */
+  }
+
+  .img-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    padding: 4px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .img-container img:hover {
+    transform: scale(1.05);
+  }
+
+  .img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+</style>
+
 <head>
   <meta charset="UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
@@ -50,7 +89,6 @@
       </div>
     </nav>
   </header>
-
   <div class="section-container">
     <div class="container">
       <div class="row">
@@ -65,52 +103,57 @@
             </p>
           </div>
         </div>
-
         <div class="col-md-12">
-
           <div id="myCarousel" class="carousel slide projects-carousel">
             <!-- Carousel items -->
             <div class="carousel-inner">
               <div class="item active">
                 <div class="row">
-                  <div class="col-sm-4">
-                    <a href="https://www.youtube.com/watch?v=OKFV2odwmr4" class="black-image-project-hover" target="_blank">
-                      <img src="./assets/images/sawvr.png" alt="Image" class="img-responsive">
+                  <!-- Primer proyecto -->
+                  <div class="col-md-6">
+                    <a href="https://www.youtube.com/watch?v=OKFV2odwmr4" class="black-image-project-hover"
+                      target="_blank">
+                      <img src="./assets/images/sawvr.png" alt="Simulador VR" class="img-responsive project-image">
                     </a>
-                    <div class="card-container">
+                    <div class="card-container d-flex flex-column">
                       <h4>Video demostrativo</h4>
-                      <h3>Simulador VR </h3>
-                      <p>Simulador VR educativo en Unity donde estudiantes y entusiastas del diseño industrial interactúan con maquinaria (sierras, herramientas) 
-                        usando equipos de protección en un taller virtual realista que simula buenas prácticas de seguridad.
+                      <h3>Simulador VR</h3>
+                      <p>Simulador VR educativo en Unity donde estudiantes interactúan con maquinaria industrial
+                        (sierras, herramientas) usando equipo de protección en un taller virtual realista.
                       </p>
-                      <a href="https://www.youtube.com/watch?v=OKFV2odwmr4" class="btn btn-default" target="_blank">Ver en Youtube!</a>
+                      <p><strong style="font-size: 12px;">Contribución:</strong></p>
+                      <p>Líder técnico de proyecto en FRYOS Studios, responsable de la dirección técnica y la
+                        coordinación
+                        de un equipo externo para el desarrollo completo del simulador VR en Unity.
+                      </p>
+                      <div class="mt-auto">
+                        <a href="https://www.youtube.com/watch?v=OKFV2odwmr4" class="btn btn-default"
+                          target="_blank">Ver en Youtube!</a>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-sm-4">
-                    <!-- <a href="" title="" class="black-image-project-hover" target="_blank"> -->
-                      <img src="./assets/images/repair.jpg" alt="" class="img-responsive">
-                    <!-- </a> -->
-                    <div class="card-container card-container-lg">
-                      <h4>Videojuego En Mantenimiento</h4>
-                      <h3>TheBestFighter</h3>
-                      <p>Videojuego de lucha 2d que evoluciona sus mecanicas a medida que avanzas en el progreso. Proximamente en este portafolio (Está en mantenimiento)</p>
-                      <!-- <a href="https://nicotinadev.itch.io/flightsimulator" title="" class="btn btn-default" target="_blank">!</a> -->
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <a href="https://nicotinadev.itch.io/pachinkopinballpong" title=""
-                      class="black-image-project-hover" target="_blank">
-                      <img src="./assets/images/pachinko.png" alt="" class="img-responsive">
+                  <!-- Segundo proyecto -->
+                  <div class="col-md-6">
+                    <a href="https://juanin96.itch.io/howl-of-liberty" class="black-image-project-hover"
+                      target="_blank">
+                      <img src="./assets/images/howlof.png" alt="Howl Of Liberty" class="img-responsive project-image">
                     </a>
-                    <div class="card-container card-container-lg">
-                      <h4>Prototipo Jugable</h4>
-                      <h3>PachinkoPinball</h3>
-                      <h3>Pong</h3>
-                      <p>Prototipo WebGL 2D en Unity que fusiona Pinball (rebotes), Pachinko (trayectorias aleatorias) y Pong (controles), con recolección de 
-                        relojes para aumentar tiempo y cambios sorpresa de mecánicas al alcanzar ciertos puntajes.
+                    <div class="card-container d-flex flex-column">
+                      <h4>GameJam (3 dias)</h4>
+                      <h3>Howl Of Liberty</h3>
+                      <p>Videojuego roguelike 2D en Unity donde una mujer lobo escapa de una prisión humana, explora
+                        mapas procedurales y absorbe habilidades de enemigos únicos para avanzar en su viaje.
                       </p>
-                      <a href="https://nicotinadev.itch.io/pachinkopinballpong" title=""
-                        class="btn btn-default" target="_blank">Jugar!</a>
+                      <p><strong style="font-size: 12px;">Contribución:</strong></p>
+                      <p>Project manager durante la intensa game jam de 3 días. Lideré la coordinación del equipo,
+                        participé activamente en todas las áreas del desarrollo y diseñé mecánicas clave junto con
+                        power-ups que
+                        marcaron la diferencia en la jugabilidad.
+                      </p><br>
+                      <div class="mt-auto">
+                        <a href="https://juanin96.itch.io/howl-of-liberty" class="btn btn-default"
+                          target="_blank">Jugar!</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -118,67 +161,165 @@
               <!--/item-->
               <div class="item">
                 <div class="row">
-                  <div class="col-sm-4">
-                    <a href="https://nicotinadev.itch.io/keybotrevolution" title="" class="black-image-project-hover" target="_blank">
+                  <div class="col-md-6">
+                    <a href="https://agfonse.itch.io/sokobunny" title="" class="black-image-project-hover"
+                      target="_blank">
+                      <img src="./assets/images/soko.png" alt="" class="img-responsive">
+                    </a>
+                    <div class="card-container card-container-lg">
+                      <h4>GameJam (1dia)</h4>
+                      <h3>SokoBunny</h3>
+                      <p>Juego de Puzzle 2D de arriba hacia abajo en el que controlas a Soko, un conejito
+                        que se quedó por fuera de su propia casa y ahora tiene que usar baterías para restaurar
+                        la energía y volver a entrar.
+                      </p>
+                      <p><strong style="font-size: 12px;">Contribución:</strong></p>
+                      <p>Level designer, colaboré con el diseño de un mapa e interfaz del menú principal, implementación
+                        de las interfaces, animaciónes, mecanicas de cambio de juego y cambios en mecanicas del jugador.
+                      </p>
+                      <a href="https://agfonse.itch.io/sokobunny" class="btn btn-default" target="_blank">Jugar!</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <a title="" class="black-image-project-hover" target="_blank">
+                      <img src="./assets/images/repair.jpg" alt="" class="img-responsive">
+                    </a>
+                    <div class="card-container card-container-lg">
+                      <h4>En Mantenimiento</h4>
+                      <h3>TheBestFighter</h3>
+                      <p>Videojuego de lucha 2d que evoluciona sus mecanicas a medida que avanzas en el progreso.
+                        Proximamente en este portafolio (Está en mantenimiento)</p>
+                      <p><strong style="font-size: 12px;">Contribución:</strong></p>
+                      <p>Creador del concepto y desarrollador completo del prototipo en RPGMaker. Diseñé mecánicas
+                        basadas en la interacción con menús y objetos,
+                        implementé el sistema de combate y escribí los textos para reforzar el humor y el giro del
+                        tutorial como núcleo del juego.
+                      </p>
+                      <!-- <a href="https://nicotinadev.itch.io/absorcion" class="btn btn-default" target="_blank">Jugar!</a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="row">
+                  <div class="col-md-6">
+                    <a href="https://nicotinadev.itch.io/pachinkopinballpong" class="black-image-project-hover"
+                      target="_blank">
+                      <img src="./assets/images/pachinko.png" alt="" class="img-responsive">
+                    </a>
+                    <div class="card-container card-container-lg">
+                      <h4>Prototipo Jugable</h4>
+                      <h3>PachinkoPinballPong</h3>
+                      <p>Prototipo WebGL 2D en Unity que fusiona Pinball (rebotes), Pachinko (trayectorias aleatorias) y
+                        Pong (controles), con recolección de
+                        relojes para aumentar tiempo y cambios sorpresa de mecánicas al alcanzar ciertos puntajes.
+                      </p>
+                      <p><strong style="font-size: 12px;">Contribución:</strong></p>
+                      <p>Autor del proyecto. Desarrollé íntegramente el prototipo WebGL 2D en Unity: diseñé la fusión de
+                        mecánicas Pinball (rebotes), Pachinko (trayectorias aleatorias) y Pong (controles), programando
+                        la
+                        recolección de relojes para tiempo extra y cambios sorpresa de gameplay al superar puntajes
+                        clave.
+                      </p>
+                      <a href="https://nicotinadev.itch.io/pachinkopinballpong" title="" class="btn btn-default"
+                        target="_blank">Jugar!</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <a href="https://nicotinadev.itch.io/flightsimulator" title="" class="black-image-project-hover"
+                      target="_blank">
+                      <img src="./assets/images/flyght.png" alt="" class="img-responsive">
+                    </a>
+                    <div class="card-container card-container-lg">
+                      <h4>Prototipo Jugable</h4>
+                      <h3>FlightSimulator</h3>
+                      <p>Juego experimental de vuelo: despega, vuela libremente y aterriza en las 3 plataformas del
+                        escenario. Sin objetivos ni presión, solo la experiencia básica de pilotar un avión virtual.</p>
+                      </p>
+                      <p><strong style="font-size: 12px;">Contribución:</strong></p>
+                      <p>Autor del proyecto. Diseñé y desarrollé íntegramente este puzzle 2D (perspectiva arriba-abajo)
+                        en
+                        Unity: controlas a Soko, un conejo atrapado fuera de su casa, que usa baterías para restaurar
+                        energía
+                        y abrir puertas. Implementé sistemas de recarga y puzzles basados en gestión de recursos.
+                      </p>
+                      <a href="https://nicotinadev.itch.io/flightsimulator" class="btn btn-default"
+                        target="_blank">Jugar!</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="row">
+                  <div class="col-md-6">
+                    <a href="https://nicotinadev.itch.io/keybotrevolution" title="" class="black-image-project-hover"
+                      target="_blank">
                       <img src="./assets/images/keybot.png" alt="" class="img-responsive">
                     </a>
                     <div class="card-container card-container-lg">
                       <h4>En desarrollo - Unity</h4>
                       <h3>KeybotRevolution</h3>
-                      <p>Prototipo 3D en Unity (fase inicial) donde un robot interactúa con flechas flotantes para cargar y disparar un láser, destruyendo objetos. 
-                        Base de juego de ritmo sin música aún, con mecánicas de jefes planeadas.</p>
-                      <a href="https://nicotinadev.itch.io/keybotrevolution" title="" class="btn btn-default" target="_blank">Jugar!</a>
+                      <p>Prototipo 3D en Unity (fase inicial) con un robot que usa flechas flotantes para cargar un
+                        láser y
+                        destruir objetos. Juego de ritmo sin audio, con mecánicas de jefes en desarrollo.
+                      </p>
+                      <p><strong style="font-size: 12px;">Contribución:</strong></p>
+                      <p>Autor del proyecto. Me encargué de todo el desarrollo: desde el diseño de la idea y mecánicas,
+                        hasta la programación
+                        completa del prototipo 3D en Unity, incluyendo el sistema de disparo y las bases de los combates
+                        contra jefes.
+                      </p>
+                      <a href="https://nicotinadev.itch.io/keybotrevolution" title="" class="btn btn-default"
+                        target="_blank">Jugar!</a>
                     </div>
                   </div>
-                  <div class="col-sm-4">
+                  <div class="col-md-6">
                     <a href="https://nicotinadev.itch.io/absorcion" class="black-image-project-hover" target="_blank">
                       <img src="./assets/images/absorcion.png" alt="Image" class="img-responsive">
                     </a>
                     <div class="card-container">
                       <h4>Demo Abandonado</h4>
                       <h3>Absorción (RPGMaker)</h3>
-                      <p>¿Leer descripciones? ¿Equipar objetos? En este RPG, esas son las verdaderas habilidades del héroe. Supera 5 combates básicos (si prestas atención) y 
-                        llega hasta el rey para tu título de caballero novicio. Demo corto pero con lección: ¡nunca subestimes un tutorial!</p>
+                      <p>RPG irónico en Unity donde leer descripciones y equipar objetos son las habilidades clave.
+                        Supera 5
+                        combates básicos, alcanza al rey y gana tu título de caballero novicio. Demo breve con una
+                        lección: ¡el tutorial es tu arma secreta!</p>
+                      <p><strong style="font-size: 12px;">Contribución:</strong></p>
+                      <p>Creador del concepto y desarrollador completo del prototipo en RPGMaker. Diseñé mecánicas
+                        basadas en la interacción con menús y objetos,
+                        implementé el sistema de combate y escribí los textos para reforzar el humor y el giro del
+                        tutorial como núcleo del juego.
+                      </p>
                       <a href="https://nicotinadev.itch.io/absorcion" class="btn btn-default" target="_blank">Jugar!</a>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-4">
-                    <a href="https://nicotinadev.itch.io/flightsimulator" title="" class="black-image-project-hover" target="_blank">
-                      <img src="./assets/images/flyght.png" alt="" class="img-responsive">
-                    </a>
-                    <div class="card-container card-container-lg">
-                      <h4>Prototipo Jugable</h4>
-                      <h3>FlightSimulator</h3>
-                      <p>Juego experimental de vuelo: despega, vuela libremente y aterriza en las 3 plataformas del escenario. Sin objetivos ni presión, solo la experiencia básica de pilotar un avión virtual.</p>
-                      <a href="https://nicotinadev.itch.io/flightsimulator" title="" class="btn btn-default" target="_blank">Jugar!</a>
                     </div>
                   </div>
                 </div>
               </div>
-              <!--/item-->
               <div class="item">
                 <div class="row">
-                  <div class="col-sm-4">
+                  <div class="col-md-6">
                     <a href="https://nicotinadev.itch.io/desafio3xd" class="black-image-project-hover" target="_blank">
                       <img src="./assets/images/globo.png" alt="Image" class="img-responsive">
                     </a>
                     <div class="card-container">
                       <h4>Terminado</h4>
                       <h3>Desafio 3 Unity Learn</h3>
-                      <p>Reto finalizado del curso Unity Learn: controla un globo que evita obstáculos mientras recoge objetos flotantes. Demuestra dominio de físicas 3D, sistemas de colisión y recolección de items.
+                      <p>Reto finalizado del curso Unity Learn: controla un globo que evita obstáculos mientras recoge
+                        objetos flotantes. Demuestra dominio de físicas 3D, sistemas de colisión y recolección de items.
                       </p>
-                      <a href="https://nicotinadev.itch.io/desafio3xd" class="btn btn-default" target="_blank">Jugar!</a>
+                      <a href="https://nicotinadev.itch.io/desafio3xd" class="btn btn-default"
+                        target="_blank">Jugar!</a>
                     </div>
                   </div>
-                  <div class="col-sm-4">
+                  <div class="col-md-6">
                     <a href="https://nicotinadev.itch.io/desafio4" class="black-image-project-hover" target="_blank">
                       <img src="./assets/images/football.png" alt="Image" class="img-responsive">
                     </a>
                     <div class="card-container">
                       <h4>Terminado</h4>
                       <h3>Desafio 4 Unity Learn</h3>
-                      <p>Juego de defensa donde proteges tu portería de balones enemigos. Usa un power-up para empujarlos con más fuerza. 
+                      <p>Juego de defensa donde proteges tu portería de balones enemigos. Usa un power-up para
+                        empujarlos con más fuerza.
                         Proyecto terminado que demuestra mecánicas de física y sistemas de power-ups en Unity.
                       </p>
                       <a href="https://nicotinadev.itch.io/desafio4" class="btn btn-default" target="_blank">Jugar!</a>
@@ -194,36 +335,58 @@
 
             <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
           </div>
-
-
-
           <!--/myCarousel-->
         </div>
-
-
-
       </div>
     </div>
   </div>
 
+  <body class="bg-light py-5">
 
-  <footer class="footer-container text-center">
     <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <p>© Nicolas Saavedra | Portafolio de desarrollo de videojuegos 2025
+      <div class="card shadow rounded-4">
+        <div class="card-header bg-dark text-white text-center fw-bold">
+          Galería de 12 Imágenes
+        </div>
+        <div class="card-body">
+          <div class="row img-container g-3">
+            <!-- Fila 1 -->
+            <div class="col-6 col-md-2"><img src="./assets/images/Habilidades/unity.png" alt="1"></div>
+            <div class="col-6 col-md-2"><img src="./assets/images/Habilidades/git.png" alt="2"></div>
+            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="3"></div>
+            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="4"></div>
+            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="5"></div>
+            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="6"></div>
+            <!-- Fila 2 -->
+            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="7"></div>
+            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="8"></div>
+            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="9"></div>
+            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="10"></div>
+            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="11"></div>
+            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="12"></div>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
+    </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function (event) {
-      navActivePage();
-    });
-  </script>
 
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
+    <footer class="footer-container text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <p>© Nicolas Saavedra | Portafolio de desarrollo de videojuegos 2025
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        navActivePage();
+      });
+    </script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
 
 <script>
   (function (i, s, o, g, r, a, m) {
@@ -237,7 +400,7 @@
 </script>
 
 -->
-  <script type="text/javascript" src="./main.70a66962.js"></script>
-</body>
+    <script type="text/javascript" src="./main.70a66962.js"></script>
+  </body>
 
 </html>
