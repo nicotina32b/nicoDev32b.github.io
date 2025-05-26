@@ -11,33 +11,41 @@
     height: 100%;
   }
 
-  .card-container p {
-    text-align: left;
-    width: 100%;
-    /* asegura que ocupe todo el ancho disponible dentro del container */
-  }
+  /* Estilos personalizados para móvil */
+  @media (max-width: 1080px) {
+    .skill-img {
+      max-height: 80px;
+      /* Ajusta este valor según necesites */
 
-  .img-container img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 8px;
-    padding: 4px;
-    background-color: #f8f9fa;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease-in-out;
-  }
+    }
+    }
 
-  .img-container img:hover {
-    transform: scale(1.05);
-  }
+    .card-container p {
+      text-align: left;
+      width: 100%;
+      /* asegura que ocupe todo el ancho disponible dentro del container */
+    }
 
-  .img-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+    .img-container img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      padding: 4px;
+      background-color: #f8f9fa;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease-in-out;
+    }
 
+    .img-container img:hover {
+      transform: scale(1.2);
+    }
+
+    .img-container {
+      display: flex;  
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 </style>
 
 <head>
@@ -304,12 +312,8 @@
                     <div class="card-container">
                       <h4>Terminado</h4>
                       <h3>Desafio 3 Unity Learn</h3>
-<<<<<<< Updated upstream
                       <p>Reto finalizado del curso Unity Learn: controla un globo que evita obstáculos mientras recoge
                         objetos flotantes. Demuestra dominio de físicas 3D, sistemas de colisión y recolección de items.
-=======
-                      <p>Reto finalizado del curso Unity Learn: controla un globo que evita obstáculos mientras recoge objetos flotantes. Demuestra dominio de físicas 3D, sistemas de colisión y recolección de items.
->>>>>>> Stashed changes
                       </p>
                       <a href="https://nicotinadev.itch.io/desafio3xd" class="btn btn-default"
                         target="_blank">Jugar!</a>
@@ -345,34 +349,75 @@
     </div>
   </div>
 
-  <body class="bg-light py-5">
+  <body class="bg-light py-3">
 
     <div class="container">
       <div class="card shadow rounded-4">
         <div class="card-header bg-dark text-white text-center fw-bold">
-          Galería de 12 Imágenes
-        </div>
+          <h1 class="h2">Habilidades</h1>
+        </div><br>
         <div class="card-body">
-          <div class="row img-container g-3">
+          <div class="row img-container g-2 mb-3">
             <!-- Fila 1 -->
-            <div class="col-6 col-md-2"><img src="./assets/images/Habilidades/unity.png" alt="1"></div>
-            <div class="col-6 col-md-2"><img src="./assets/images/Habilidades/git.png" alt="2"></div>
-            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="3"></div>
-            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="4"></div>
-            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="5"></div>
-            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="6"></div>
+            <div class="col-4 col-md-2 text-center">
+              <p class="mb-2 fs-6 fw-normal">Unity</p>
+              <!-- <p class="mb-2 fs-6 fw-bold">Unity</p> -->
+              <img src="./assets/images/Habilidades/unity.png" alt="1" class="img-fluid skill-img"> <br><br>
+            </div>
+            <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-center text-center">
+              <p class="mb-2 fs-6 fw-normal">Github</p>
+              <img src="./assets/images/Habilidades/git.png" alt="2" class="img-fluid skill-img"><br><br>
+            </div>
+            <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-center text-center">
+              <p class="mb-2 fs-6 fw-normal">C#</p>
+              <img src="./assets/images/Habilidades/csharp.png" alt="3" class="img-fluid skill-img"><br><br>
+            </div>
+            <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-center text-center">
+              <p class="mb-2 fs-6 fw-normal">VisualStudio</p>
+              <img src="./assets/images/Habilidades/visual.png" alt="4" class="img-fluid skill-img"><br><br>
+            </div>
+            <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-center text-center">
+              <p class="mb-2 fs-6 fw-normal">ARFoundation</p>
+              <img src="./assets/images/Habilidades/ARFoundation.png" alt="5" class="img-fluid skill-img"><br><br>
+            </div>
+            <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-center text-center">
+              <p class="mb-2 fs-6 fw-normal">NianticSDK</p>
+              <img src="./assets/images/Habilidades/lightship.png" alt="6" class="img-fluid skill-img"><br><br>
+            </div>
+          </div>
+          <br>
+          <div class="row img-container g-3">
             <!-- Fila 2 -->
-            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="7"></div>
-            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="8"></div>
-            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="9"></div>
-            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="10"></div>
-            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="11"></div>
-            <div class="col-6 col-md-2"><img src="https://via.placeholder.com/150" alt="12"></div>
+            <div class="col-6 col-md-2 d-flex flex-column align-items-center justify-content-center text-center">
+              <p class="mb-2 fs-6 fw-bold">CineMachine</p>
+              <img src="./assets/images/Habilidades/cineMachine.png" alt="1" class="img-fluid skill-img"><br><br>
+            </div>
+            <div class="col-6 col-md-2 d-flex flex-column align-items-center justify-content-center text-center">
+              <p class="mb-2 fs-6 fw-normal">RPG Maker</p>
+              <img src="./assets/images/Habilidades/rpgMaker.png" alt="1" class="img-fluid skill-img"><br><br>
+            </div>
+            <div class="col-6 col-md-2 d-flex flex-column align-items-center justify-content-center text-center">
+              <p class="mb-2 fs-6 fw-normal">BlockmanEditor</p>
+              <img src="./assets/images/Habilidades/blockman.png" alt="1" class="img-fluid skill-img"><br><br>
+            </div>
+            <div class="col-6 col-md-2 d-flex flex-column align-items-center justify-content-center text-center">
+              <p class="mb-2 fs-6 fw-normal">JavaScript</p>
+              <img src="./assets/images/Habilidades/javaS.png" alt="1" class="img-fluid skill-img"><br><br>
+            </div>
+            <div class="col-6 col-md-2 d-flex flex-column align-items-center justify-content-center text-center">
+              <p class="mb-2 fs-6 fw-normal">HTML5</p>
+              <img src="./assets/images/Habilidades/htmlFive.png" alt="1" class="img-fluid skill-img"><br><br>
+            </div>
+            <div class="col-6 col-md-2 d-flex flex-column align-items-center justify-content-center text-center">
+              <p class="mb-2 fs-6 fw-normal">Bootstrap</p>
+              <img src="./assets/images/Habilidades/bootstrap.png" alt="1" class="img-fluid skill-img"><br><br>
+            </div>
           </div>
         </div>
       </div>
     </div>
     </div>
+    <br><br>
 
 
     <footer class="footer-container text-center">
